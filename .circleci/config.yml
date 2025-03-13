@@ -43,4 +43,8 @@ jobs:
     steps:
       - run:
           name: deploy-application
+<<<<<<< HEAD
           command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "export SERVER=\"$SERVER\"; export PRIVATE_KEY=\"$PRIVATE_KEY\"; rm -rf simple-app/; git clone https://github.com/ailsapm/simple-app.git; source simple-app/deploy.sh"
+=======
+          command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_PUBLIC_DNS "rm -rf SimpleApp/; git clone https://github.com/ailsapm/simple-app.git; source SimpleApp/deploy.sh"
+>>>>>>> parent of 3ac9532 (Merge pull request #1 from ailsapm/add_home_link)
